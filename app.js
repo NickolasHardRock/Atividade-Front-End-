@@ -19,6 +19,27 @@ $(function(){$('div').on('click',function(){
     $(this).toggleClass('show-description');
     });
 });
+
+async function CarregarImagem(){
+    
+    const comida = await BuscarRefeicao();
+
+    const indexarImagem = document.getElementById('card');
+    indexarImagem.innerHTML = `
+     <div style="background-image: url('${comida.strMealThumb}');"> 
+        <p>
+            ${comida.strMeal} <span class="price">$8</span><br />
+            <small>nectarines </small>
+        </p>
+    </div>
+    `;
+}
+window.onload = () =>{    
+CarregarImagem();
+
+};
+
+
     
 //     .then(res => res.json())
 //     .then(data => {
