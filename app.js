@@ -15,10 +15,10 @@ function getRandomInt() {
 }
 console.log(getRandomInt());
 
-$(function(){$('div').on('click',function(){
-    $(this).toggleClass('show-description');
-    });
-});
+// $(function(){$('div').on('click',function(){
+//     $(this).toggleClass('show-description');
+//     });
+// });
 
 async function CarregarImagem(){
     
@@ -28,8 +28,7 @@ async function CarregarImagem(){
     indexarImagem.innerHTML = `
      <div style="background-image: url('${comida.strMealThumb}');"> 
         <p>
-            ${comida.strMeal} <span class="price">$8</span><br />
-            <small>nectarines </small>
+            ${comida.strMeal} 
         </p>
     </div>
     `;
